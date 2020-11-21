@@ -12,7 +12,7 @@ abstract class AuthenticationEvent extends Equatable{
 }
 
 // Se activa justo despues de que se lanza la aplicacion
-class AppLoad extends AuthenticationEvent{}
+class AppLoaded extends AuthenticationEvent{}
 
 // Se activa cuando el usuario ha iniciado sesion correctamente
 class UserLoggedIn extends AuthenticationEvent{

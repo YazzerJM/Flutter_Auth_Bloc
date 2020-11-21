@@ -18,7 +18,7 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState>{
   @override
   Stream<AuthenticationState> mapEventToState(AuthenticationEvent event) async* {
 
-    if(event is AppLoad){
+    if(event is AppLoaded){
       yield* _mapAppLoadedToState(event);
     }
     
@@ -31,7 +31,7 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState>{
     }
   }
 
-  Stream<AuthenticationState> _mapAppLoadedToState(AppLoad event) async*{
+  Stream<AuthenticationState> _mapAppLoadedToState(AppLoaded event) async*{
     yield AuthenticationLoading();
     
     try{
