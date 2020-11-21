@@ -20,4 +20,10 @@ class UserLoggedIn extends AuthenticationEvent{
   final User user;
   
   UserLoggedIn({@required this.user});
+
+  @override
+  List<Object> get props => [user];
 }
+
+// Se activa cuando el usuario se desconecta
+class UserLoggedOut extends AuthenticationEvent{}
